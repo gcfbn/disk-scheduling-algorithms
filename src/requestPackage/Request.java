@@ -1,3 +1,5 @@
+package requestPackage;
+
 public class Request {
 
     private final int position, arrivalTime, deadline;
@@ -11,6 +13,14 @@ public class Request {
 
     public Request(int position, int arrivalTime) {
         this(position, arrivalTime, 0);
+    }
+
+    public int compareArrivalTime(Request r){
+        return this.arrivalTime - r.arrivalTime;
+    }
+
+    public int compareDeadline(Request r){
+        return this.deadline - r.deadline;
     }
 
     public int getPosition() {
