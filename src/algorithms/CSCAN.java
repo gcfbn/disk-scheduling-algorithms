@@ -29,9 +29,7 @@ public class CSCAN implements Algorithm{
         while (completedRequests < requests.size()) {
 
             // add to the queue requests that already arrived
-            while (requestIndex < requests.size() && requests.get(requestIndex).getArrivalTime() <= currentTime) {
-                queue.add(requests.get(requestIndex++));
-            }
+            QueueHelper.addRequests(queue, requests, currentTime, requestIndex);
 
             // if any of requests didn't arrive, jump in time to the earliest request that is not yet completed
             if (queue.isEmpty()) {
