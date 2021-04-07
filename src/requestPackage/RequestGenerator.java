@@ -17,7 +17,7 @@ public class RequestGenerator {
             if (randomGenerator.nextDouble() >= 0.25)   // 1/4 of all requests will have no deadline
                 randomDeadline = (int) (randomArrivalTime + (1 + 5 * randomGenerator.nextDouble()) * diskSize);
             else
-                randomDeadline = 0;
+                randomDeadline = Integer.MAX_VALUE;
 
             // create request and add it to the queue
             requests.add(new Request(randomPosition, randomArrivalTime, randomDeadline));
