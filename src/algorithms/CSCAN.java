@@ -23,7 +23,7 @@ public class CSCAN implements Algorithm{
         // sort requests by arrival time
         requests.sort(new ArrivalTimeComparator());
 
-        // index of request that would be added to the queue as next
+        // index of request that will be added to the queue as next
         int requestIndex = 0;
 
         while (completedRequests < requests.size()) {
