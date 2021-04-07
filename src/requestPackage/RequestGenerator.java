@@ -5,21 +5,17 @@ import java.util.Random;
 
 public class RequestGenerator {
 
-    private static final int DISK_SIZE = 100;
-    private static final int MAX_ARRIVAL_TIME = 100;
-    private static final int NUMBER_OF_REQUESTS = 15;
-
-    public static ArrayList<Request> getRandomSet(){
+    public static ArrayList<Request> getRandomSet(int diskSize, int maxArrivalTime, int numberOfRequests){
 
         ArrayList<Request> requests = new ArrayList<>();
         Random randomGenerator = new Random();
 
-        for (int i=0; i < NUMBER_OF_REQUESTS; i++){
-            int randomPosition = Math.abs(randomGenerator.nextInt() % (DISK_SIZE + 1));
-            int randomArrivalTime = Math.abs(randomGenerator.nextInt() % (MAX_ARRIVAL_TIME + 1));
+        for (int i=0; i < numberOfRequests; i++){
+            int randomPosition = Math.abs(randomGenerator.nextInt() % (diskSize));
+            int randomArrivalTime = Math.abs(randomGenerator.nextInt() % (maxArrivalTime + 1));
             int randomDeadline;
             if (randomGenerator.nextDouble() >= 0.25)
-                randomDeadline = (int)(randomArrivalTime + (1 + 5 * randomGenerator.nextDouble()) * DISK_SIZE);
+                randomDeadline = (int)(randomArrivalTime + (1 + 5 * randomGenerator.nextDouble()) * diskSize);
             else
                 randomDeadline = 0;
 

@@ -11,10 +11,6 @@ public class Request {
         this.deadline = deadline;
     }
 
-    public Request(int position, int arrivalTime) {
-        this(position, arrivalTime, 0);
-    }
-
     public int compareArrivalTime(Request r){
         return this.arrivalTime - r.arrivalTime;
     }
