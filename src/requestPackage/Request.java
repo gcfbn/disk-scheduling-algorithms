@@ -2,7 +2,9 @@ package requestPackage;
 
 public class Request {
 
-    private final int position, arrivalTime, deadline;
+    private final int position; // number of disk block
+    private final int arrivalTime;
+    private final int deadline;
     private int completionTime;
 
     public Request(int position, int arrivalTime, int deadline) {
@@ -31,7 +33,7 @@ public class Request {
         this.completionTime = completionTime;
     }
 
-    public int getWaitingTime(){
+    public int getWaitingTime() {
         return completionTime - arrivalTime;
     }
 }
