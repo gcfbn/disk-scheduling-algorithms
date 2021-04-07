@@ -63,7 +63,8 @@ public class SSTF implements Algorithm {
             closestRequest.setCompletionTime(currentTime);
             queue.remove(closestRequest);
             completedRequests++;
-        }
+
+        } // end of while loop
 
         return totalJumps;
     }

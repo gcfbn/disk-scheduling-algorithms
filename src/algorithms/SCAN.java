@@ -119,7 +119,8 @@ public class SCAN implements Algorithm {
             closestRequest.setCompletionTime(currentTime);
             completedRequests++;
             queue.remove(closestRequest);
-        }
+
+        } // end of while loop
 
         return totalJumps;
     }
