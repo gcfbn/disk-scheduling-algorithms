@@ -31,7 +31,9 @@ public class SCAN implements Algorithm {
         while (completedRequests < requests.size()) {
 
             // add to the queue requests that already arrived
-            QueueHelper.addRequests(queue, requests, currentTime, requestIndex);
+            while (requestIndex < requests.size() && requests.get(requestIndex).getArrivalTime() <= currentTime) {
+                queue.add(requests.get(requestIndex++));
+            }
 
             // if any of requests didn't arrive, jump in time to the earliest request that is not yet completed
             if (queue.isEmpty()) {
