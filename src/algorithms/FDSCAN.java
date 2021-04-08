@@ -66,6 +66,7 @@ public class FDSCAN implements Algorithm {
                     // if request under currentIndex is on the right-hand side of the head
                     if (currentRequest.getPosition() >= head) {
 
+                        // move the head to requested position
                         int distance = Math.abs(head - currentRequest.getPosition());
                         currentTime += distance;
                         totalJumps += distance;
@@ -90,6 +91,7 @@ public class FDSCAN implements Algorithm {
                     // if request under currentIndex is on the left-hand side of the head
                     if (currentRequest.getPosition() <= head) {
 
+                        // move the head to requested position
                         int distance = Math.abs(head - currentRequest.getPosition());
                         currentTime += distance;
                         totalJumps += distance;
