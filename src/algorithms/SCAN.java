@@ -54,7 +54,7 @@ public class SCAN implements Algorithm {
                 closestIndex = 0;
                 closestRequest = queue.get(closestIndex);
 
-                // find closest request on the right-hand side of the queue
+                // find closest request on the right-hand side of the head
                 while (closestIndex < queue.size() && closestRequest.getPosition() < head)
                     closestRequest = queue.get(closestIndex++);
 
@@ -73,7 +73,7 @@ public class SCAN implements Algorithm {
                     currentTime += head - closestRequest.getPosition();
                     totalJumps += head - closestRequest.getPosition();
 
-                } else { // if closestRequest is on the right-hand side of the queue
+                } else { // if closestRequest is on the right-hand side of the head
 
                     // add time that passed during the head's move
                     currentTime += closestRequest.getPosition() - head;
@@ -104,7 +104,7 @@ public class SCAN implements Algorithm {
                     currentTime += closestRequest.getPosition();
                     totalJumps += closestRequest.getPosition();
 
-                } else {// if closest request is on the left-hand side of the head
+                } else {    // if closest request is on the left-hand side of the head
 
                     // add time that passed during the head's move
                     currentTime += head - closestRequest.getPosition();

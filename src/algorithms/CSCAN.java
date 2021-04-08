@@ -63,7 +63,7 @@ public class CSCAN implements Algorithm{
                 head = 0;
             }
 
-            else{ // if closestRequest is on the right-hand side of the queue
+            else{ // if closestRequest is on the right-hand side of the head
 
                 // add time that passed during the head's move
                 currentTime += closestRequest.getPosition() - head;
