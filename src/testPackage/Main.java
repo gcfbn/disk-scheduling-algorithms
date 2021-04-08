@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static void main (String[] args){
+    public static void main(String[] args) {
 
         final int DISK_SIZE = 101;
 
@@ -22,7 +22,7 @@ public class Main {
         int totalJumps = algorithm.execute(requests, DISK_SIZE);
 
         System.out.println("Total jumps: " + totalJumps);
-        for (Request r : requests){
+        for (Request r : requests) {
             System.out.println("Position: " + r.getPosition() + ", completion time: " + r.getCompletionTime());
         }
     }

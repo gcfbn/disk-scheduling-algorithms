@@ -7,7 +7,7 @@ import requestPackage.Request;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
-public class EDF implements Algorithm{
+public class EDF implements Algorithm {
 
     @Override
     public int execute(ArrayList<Request> requests, int diskSize) {
@@ -25,8 +25,8 @@ public class EDF implements Algorithm{
 
         // index of request that will be added to the queue as next
         int requestIndex = 0;
-        
-        while (completedRequests < requests.size()){
+
+        while (completedRequests < requests.size()) {
 
             // add requests that already arrived
             while (requestIndex < requests.size() && requests.get(requestIndex).getArrivalTime() <= currentTime) {
@@ -34,7 +34,7 @@ public class EDF implements Algorithm{
             }
 
             // if queue is empty, jump in time and add request with smallest arrival time to the queue
-            if (queue.isEmpty()){
+            if (queue.isEmpty()) {
                 queue.add(requests.get(requestIndex++));
                 currentTime = queue.peek().getArrivalTime();
             }
