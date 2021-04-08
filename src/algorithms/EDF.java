@@ -1,5 +1,6 @@
 package algorithms;
 
+import requestPackage.ArrivalTimeComparator;
 import requestPackage.DeadlineComparator;
 import requestPackage.Request;
 
@@ -18,6 +19,9 @@ public class EDF implements Algorithm{
         int currentTime = 0;
         int totalJumps = 0;
         int completedRequests = 0;
+
+        // sort requests by arrival time
+        requests.sort(new ArrivalTimeComparator());
 
         // index of request that will be added to the queue as next
         int requestIndex = 0;
