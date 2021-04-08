@@ -1,12 +1,3 @@
-Ig/disk-scheduling-algorithms.iml
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/vcs.xml
-/.idea/workspace.xml
-/.idea/uiDesigner.xml
-/out/production/disk-scheduling-algorithms/algorithms/Algorithm.class
-/out/production/disk-scheduling-algorithms/requestPackage/ArrivalTimeComparator.class
-/out/production/disk-scheduling-algorithms/algorithms/FCFS.class
-/out/production/disk-scheduling-algorithms/requestPackage/Request.class
-/out/production/disk-scheduling-algorithms/requestPackage/RequestGenerator.class
-/out/production/disk-scheduling-algorithms/algorithms/SSTF.class
+/*.iml
+/.idea/*
+/out/*
